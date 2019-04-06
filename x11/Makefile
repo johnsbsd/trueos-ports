@@ -78,6 +78,7 @@
     SUBDIR += ghostbsd-live-common-settings
     SUBDIR += ghostbsd-mate-settings
     SUBDIR += ghostbsd-slim-theme
+    SUBDIR += ghostbsd-xfce-settings
     SUBDIR += gmrun
     SUBDIR += gnome-clipboard-daemon
     SUBDIR += gnome-desktop
@@ -410,7 +411,6 @@
     SUBDIR += xev
     SUBDIR += xeyes
     SUBDIR += xf86dga
-    SUBDIR += xfce-installed-settings
     SUBDIR += xfce-live-settings
     SUBDIR += xfce4-clipman-plugin
     SUBDIR += xfce4-conf
