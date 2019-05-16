@@ -6,6 +6,8 @@
 # List of ports to update
 # Usage: <portname>::<project>::<repo>::<defaultbranch>
 PLIST="os::trueos::trueos::trueos-master"
+PLIST="${PLIST} sysutils/pc-sysinstall::trueos::pc-sysinstall::master"
+PLIST="${PLIST} sysutils/pc-installdialog::trueos::pc-installdialog::master"
 
 usage()
 {
@@ -34,6 +36,10 @@ update_port()
 	fi
 
 	GH_HASH=$(fetch -o - https://api.github.com/repos/$project/$repo/git/refs/heads/$dbranch 2>/dev/null | jq -r '."object"."sha"')
+	if [ -z "${GH_HASH}" ] ; then
+		#Not a branch or commit hash. Check to see if it is a version "tag" instead
+		GH_HASH=$(fetch -o - https://api.github.com/repos/$project/$repo/git/refs/tags/$dbranch 2>/dev/null | jq -r '."object"."sha"')
+	fi
 	GH_DATE=$(fetch -o - https://api.github.com/repos/$project/$repo/commits/$GH_HASH 2>/dev/null | jq -r '."commit"."author"."date"')
 
 	#echo "$GH_HASH"
@@ -66,6 +72,9 @@ if [ -z "$1" ] ; then
 fi
 
 BRANCH="$2"
+
+# Set the ports dir location
+export PORTSDIR="$(pwd)"
 
 if [ "$1" = "all" ] ; then
 	for p in $PLIST

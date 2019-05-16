@@ -11,7 +11,7 @@ COMMENT=	Game engine for Return to Castle Wolfenstein
 
 LICENSE=	GPLv3
 
-NOT_FOR_ARCHS=		aarch64 armv6 armv7 powerpc64
+NOT_FOR_ARCHS=		aarch64 armv6 armv7
 NOT_FOR_ARCHS_REASON=	fails to configure: Architecture not supported
 
 LIB_DEPENDS=	libcurl.so:ftp/curl \
@@ -28,6 +28,9 @@ USE_SDL=	sdl2
 WOLFDIR=	"libexec/${PORTNAME}"
 MAKE_ARGS=	BINDIR="${STAGEDIR}${PREFIX}/bin" \
 		COPYDIR="${STAGEDIR}${PREFIX}/${WOLFDIR}"
+
+# cf. PR 226980
+LLD_UNSAFE=	yes
 
 PLIST_SUB=	ARCH="${ARCH}" \
 		WOLFDIR="${WOLFDIR}"

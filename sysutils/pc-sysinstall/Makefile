@@ -2,11 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	pc-sysinstall
-PORTVERSION=	20180228
+PORTVERSION=	20190509195844
 CATEGORIES=	sysutils
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	PC-BSD install backend
+COMMENT=	TrueOS install backend
 
 LICENSE=	BSD2CLAUSE
 
@@ -16,6 +16,6 @@ MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
 USE_GITHUB=	yes
 GH_ACCOUNT=	trueos
 GH_PROJECT=	pc-sysinstall
-GH_TAGNAME=	4dcba1788a9151ce88b709fe34efe366009c88b3
+GH_TAGNAME=	2eb85725ca98c3098e3ab488565d75dbd492f792
 
 .include <bsd.port.mk>

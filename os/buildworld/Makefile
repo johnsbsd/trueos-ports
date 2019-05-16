@@ -4,7 +4,9 @@
 
 PORTNAME=	buildworld
 PORTVERSION=	${OS_PORTVERSION}
+PORTREVISION=	1
 CATEGORIES=	os
+PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
 MAINTAINER=	kris@ixsystems.com
 COMMENT=	Port for the buildworld phase of OS
@@ -12,18 +14,18 @@ COMMENT=	Port for the buildworld phase of OS
 SRCDIR?=	/usr/src
 BUILD_DEPENDS=	${SRCDIR}/Makefile:os/src
 
+USES=	os:flavors
 PREFIX=/
 EXTRACT_ONLY=
 DISTFILES=
 SRCDIR?=/usr/src
 WRKSRC=${SRCDIR}
 WITHOUT_FBSD10_FIX=	yes
-PKG_ABISTRING=	FreeBSD:13:${ARCH}
 LOCAL_SDIR?=	/usr/local_source
+NEED_ROOT=	yes
 .if exists(${LOCAL_SDIR}/${PORTNAME})
 WRKSRC=	${LOCAL_SDIR}/${PORTNAME}
 .endif
-
 
 .include "Makefile.options"
 .include "Makefile.options.desc"
@@ -50,32 +52,35 @@ MCONF=	__MAKE_CONF=${__MAKE_CONF}
 MCONF=
 .endif
 
-PLIST_FILES+=	usr/dist/world.txz
+PLIST_FILES+=	${OS_WORLDDIST}
 
 # This is broken right now
 #MFLAGS+=	MAKEOBJDIRPREFIX=${WRKDIR}/obj
 
+check-sanity:
 
 do-build:
-	cd ${WRKSRC} && env -i make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
+	cd ${WRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
 		${MFLAGS} \
 		buildworld
 
 do-install:
 	${MKDIR} -p ${STAGEDIR}/world
 	${MKDIR} -p ${STAGEDIR}/usr/dist
-	cd ${WRKSRC} && env -i make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
+	cd ${WRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
 		${MFLAGS} \
 	       	DESTDIR=${STAGEDIR}/world \
 		installworld
-	cd ${WRKSRC} && env -i make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
+	cd ${WRKSRC} && env -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${WORLD_MAKE_FLAGS} \
 		${MFLAGS} \
 		DESTDIR=${STAGEDIR}/world \
 		distribution
-	if [ -n "${TRUEOS_MANIFEST}" ] ; then \
+	if [ -e "${PORTSDIR}/local_source/trueos-manifest.json" ] ; then \
+		${CP} ${FILESDIR}/trueos-manifest.json ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
+	elif [ -n "${TRUEOS_MANIFEST}" -a -e "${TRUEOS_MANIFEST}" ] ; then \
 		cp ${TRUEOS_MANIFEST} ${STAGEDIR}/world/var/db/trueos-manifest.json ; \
 	fi
-	tar cvJf ${STAGEDIR}/usr/dist/world.txz -C ${STAGEDIR}/world .
+	tar cvJf ${STAGEDIR}${OS_WORLDDIST} -C ${STAGEDIR}/world .
 	chflags -R noschg ${STAGEDIR}/world
 	rm -rf ${STAGEDIR}/world
 

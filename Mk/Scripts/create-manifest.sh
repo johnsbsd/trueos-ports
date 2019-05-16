@@ -14,7 +14,7 @@ validate_env dp_ABISTRING dp_ACTUAL_PACKAGE_DEPENDS dp_CATEGORIES dp_COMMENT \
 	dp_PKGORIGIN dp_PKGPOSTDEINSTALL dp_PKGPOSTINSTALL dp_PKGPOSTUPGRADE \
 	dp_PKGPREDEINSTALL dp_PKGPREINSTALL dp_PKGPREUPGRADE dp_PKGUPGRADE \
 	dp_PKGVERSION dp_PKG_BIN dp_PKG_IGNORE_DEPENDS dp_PKG_NOTES \
-	dp_PORT_OPTIONS dp_PREFIX dp_USERS dp_WWW
+	dp_PORT_OPTIONS dp_PREFIX dp_USERS dp_WWW dp_VITAL
 
 [ -n "${DEBUG_MK_SCRIPTS}" -o -n "${DEBUG_MK_SCRIPTS_CREATE_MANIFEST}" ] && set -x
 
@@ -57,10 +57,14 @@ EOT
 [ -z "${dp_LICENSE}" ] || echo "licenses: [ ${dp_LICENSE} ]"
 [ -z "${dp_USERS}" ] || echo "users: [ ${dp_USERS} ]"
 [ -z "${dp_GROUPS}" ] || echo "groups: [ ${dp_GROUPS} ]"
-[ -n "${dp_NO_ARCH}" -a -z "${dp_ABISTRING}" ] && echo "arch : $(${dp_PKG_BIN} config abi | tr '[:upper:]' '[:lower:]' | cut -d: -f1,2):*"
-[ -n "${dp_NO_ARCH}" -a -z "${dp_ABISTRING}" ] && echo "abi : $(${dp_PKG_BIN} config abi | cut -d: -f1,2):*"
-[ -n "${dp_ABISTRING}" ] && echo "arch : $(echo ${dp_ABISTRING} | tr '[:upper:]' '[:lower:]')"
-[ -n "${dp_ABISTRING}" ] && echo "abi : $(echo ${dp_ABISTRING})"
+if [ -n "${dp_NO_ARCH}" -a -z "${dp_ABISTRING}" ] ; then
+	echo "arch : $(${dp_PKG_BIN} config abi | tr '[:upper:]' '[:lower:]' | cut -d: -f1,2):*"
+	echo "abi : $(${dp_PKG_BIN} config abi | cut -d: -f1,2):*"
+elif [ -n "${dp_ABISTRING}" ] ; then
+	echo "arch : $(echo ${dp_ABISTRING} | tr '[:upper:]' '[:lower:]')"
+	echo "abi : $(echo ${dp_ABISTRING})"
+fi
+[ -n "${dp_VITAL}" ] && echo "vital: true"
 
 # Then the key/values sections
 echo "deps: { "

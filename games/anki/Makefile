@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	anki
-DISTVERSION=	2.1.11
+DISTVERSION=	2.1.12
 CATEGORIES=	games python
 MASTER_SITES=	https://apps.ankiweb.net/downloads/current/
 DISTNAME=	anki-${PORTVERSION}-source
@@ -13,8 +13,6 @@ COMMENT=	Flashcard trainer with spaced repetition
 
 LICENSE=	AGPLv3+
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-BROKEN=		Depends on www/py-qt5-webengine that is still broken
 
 RUN_DEPENDS=	lame:audio/lame \
 		${PYTHON_PKGNAMEPREFIX}pyaudio>0:audio/py-pyaudio@${PY_FLAVOR} \

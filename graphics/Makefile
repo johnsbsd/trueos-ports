@@ -52,8 +52,6 @@
     SUBDIR += aoi
     SUBDIR += apngasm
     SUBDIR += apngdis
-    SUBDIR += appleseed
-    SUBDIR += apvlv
     SUBDIR += argyllcms
     SUBDIR += asciio
     SUBDIR += aseprite
@@ -337,12 +335,6 @@
     SUBDIR += hiptext
     SUBDIR += hobbes-icons-xpm
     SUBDIR += hppsmtools
-    SUBDIR += hs-JuicyPixels
-    SUBDIR += hs-cairo
-    SUBDIR += hs-dia-base
-    SUBDIR += hs-dia-functions
-    SUBDIR += hs-graphviz
-    SUBDIR += hs-svgcairo
     SUBDIR += hugin
     SUBDIR += icat
     SUBDIR += icc-profiles-adobe-cs4
@@ -394,6 +386,7 @@
     SUBDIR += jpgtn
     SUBDIR += jslice
     SUBDIR += kamera
+    SUBDIR += kamerka
     SUBDIR += kcolorchooser
     SUBDIR += kdegraphics
     SUBDIR += kdegraphics-mobipocket
@@ -527,13 +520,11 @@
     SUBDIR += linux-c7-sdl_image
     SUBDIR += linux-c7-sdl_ttf
     SUBDIR += linux-c7-tiff
-    SUBDIR += llpp
     SUBDIR += lua-gd
     SUBDIR += luminance-qt5
     SUBDIR += luxrender
     SUBDIR += luxrender14
     SUBDIR += lximage-qt
-    SUBDIR += lximageqt-l10n
     SUBDIR += magnum
     SUBDIR += magnum-examples
     SUBDIR += magnum-extras
@@ -553,6 +544,7 @@
     SUBDIR += metacam
     SUBDIR += metapixel
     SUBDIR += mhgui
+    SUBDIR += milton
     SUBDIR += minder
     SUBDIR += ming
     SUBDIR += mirage
@@ -579,6 +571,7 @@
     SUBDIR += ocrad
     SUBDIR += ocre
     SUBDIR += ogre3d
+    SUBDIR += ogre3d19
     SUBDIR += oidn
     SUBDIR += okular
     SUBDIR += open3d
@@ -733,6 +726,7 @@
     SUBDIR += pear-Image_GraphViz
     SUBDIR += pear-Image_Transform
     SUBDIR += pecl-imagick
+    SUBDIR += pecl-imagick-im7
     SUBDIR += pecl-qrencode
     SUBDIR += pecomato
     SUBDIR += pencil2d
@@ -742,6 +736,7 @@
     SUBDIR += pgplot
     SUBDIR += pho
     SUBDIR += photivo
+    SUBDIR += photoflare
     SUBDIR += photopc
     SUBDIR += photoqt
     SUBDIR += phototonic
@@ -802,7 +797,6 @@
     SUBDIR += py-PyOpenGL
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-PyX
-    SUBDIR += py-PyX12
     SUBDIR += py-actdiag
     SUBDIR += py-blockdiag
     SUBDIR += py-blockdiagcontrib-cisco
@@ -815,11 +809,11 @@
     SUBDIR += py-editobj
     SUBDIR += py-exif
     SUBDIR += py-exifread
-    SUBDIR += py-exiv2
     SUBDIR += py-fiona
     SUBDIR += py-freeimagepy
     SUBDIR += py-gd
     SUBDIR += py-gdal
+    SUBDIR += py-geomdl
     SUBDIR += py-geopandas
     SUBDIR += py-gimp
     SUBDIR += py-gizeh
@@ -892,7 +886,6 @@
     SUBDIR += qgis
     SUBDIR += qgis-ltr
     SUBDIR += qiv
-    SUBDIR += qslim
     SUBDIR += qt5-3d
     SUBDIR += qt5-graphicaleffects
     SUBDIR += qt5-imageformats
@@ -909,7 +902,6 @@
     SUBDIR += radiance
     SUBDIR += radius-engine
     SUBDIR += raster3d
-    SUBDIR += rawstudio
     SUBDIR += rawtherapee
     SUBDIR += rayshade
     SUBDIR += reactphysics3d
@@ -1021,7 +1013,6 @@
     SUBDIR += tkpng
     SUBDIR += togl
     SUBDIR += ttygif
-    SUBDIR += tulip
     SUBDIR += tumble
     SUBDIR += ufraw
     SUBDIR += uniconvertor

@@ -5,12 +5,14 @@
 PORTNAME=	kernel-debug
 PORTVERSION=	${OS_PORTVERSION}
 CATEGORIES=	os
+PKGNAMEPREFIX=	${OS_PKGNAMEPREFIX}
 
 MAINTAINER=	kris@ixsystems.com
-COMMENT=	Port for the kernel debug files
+COMMENT=	Port for the kernel compiled with debugging enabled
 
-BUILD_DEPENDS=	/usr/dist/kernel.txz:os/buildkernel
+BUILD_DEPENDS=	${OS_KERNDIST_DEBUG}:os/buildkernel-debug@${OS_FLAVOR}
 
+USES=	os:flavors
 PREFIX=/
 EXTRACT_ONLY=
 DISTFILES=
@@ -21,17 +23,17 @@ NEED_ROOT=	yes
 
 do-build:
 	@${MKDIR} -p ${STAGEDIR}
-	@${ECHO_MSG} "==> Extracting kernel.txz..."
-	@${TAR} xpf /usr/dist/kernel.txz -C ${STAGEDIR}
+	@${ECHO_MSG} "==> Extracting ${OS_KERNDIST_DEBUG}..."
+	@${TAR} xpf ${OS_KERNDIST_DEBUG} -C ${STAGEDIR}
 
 do-install:
 	@${ECHO_MSG} "==> Generating plist..."
 	@${MKDIR} -p ${STAGEDIR}
-	@(cd ${STAGEDIR}; ${FIND} ./usr/lib/debug/boot/kernel \( -type f -o -type l \) \
+	@(cd ${STAGEDIR}; ${FIND} ./boot/kernel-debug \( -type f -o -type l \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' >> ${TMPPLIST})
-	@(cd ${STAGEDIR}; ${FIND} ./usr/lib/debug/boot/kernel \( -type d \) \
+	@(cd ${STAGEDIR}; ${FIND} ./boot/kernel-debug \( -type d \) \
 		| ${SED} -e 's,^\./,,g' \
 		| ${AWK} '{print length, $$0}' | ${SORT} -rn \
 		| ${AWK} '{print $$2 }' \

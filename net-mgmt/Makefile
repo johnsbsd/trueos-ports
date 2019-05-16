@@ -50,6 +50,7 @@
     SUBDIR += ciscoconf
     SUBDIR += clog
     SUBDIR += cnagios
+    SUBDIR += cnagios4
     SUBDIR += collectd5
     SUBDIR += confregdecode
     SUBDIR += coovachilli
@@ -202,8 +203,8 @@
     SUBDIR += nsca-ng-client
     SUBDIR += nsca27
     SUBDIR += nsca27-client
-    SUBDIR += nstat
     SUBDIR += nsd_exporter
+    SUBDIR += nstat
     SUBDIR += nstreams
     SUBDIR += nvidia_gpu_prometheus_exporter
     SUBDIR += observium
@@ -398,20 +399,15 @@
     SUBDIR += zabbix3-java
     SUBDIR += zabbix3-proxy
     SUBDIR += zabbix3-server
-    SUBDIR += zabbix32-agent
-    SUBDIR += zabbix32-frontend
-    SUBDIR += zabbix32-java
-    SUBDIR += zabbix32-proxy
-    SUBDIR += zabbix32-server
-    SUBDIR += zabbix34-agent
-    SUBDIR += zabbix34-frontend
-    SUBDIR += zabbix34-java
-    SUBDIR += zabbix34-proxy
-    SUBDIR += zabbix34-server
     SUBDIR += zabbix4-agent
     SUBDIR += zabbix4-frontend
     SUBDIR += zabbix4-java
     SUBDIR += zabbix4-proxy
     SUBDIR += zabbix4-server
+    SUBDIR += zabbix42-agent
+    SUBDIR += zabbix42-frontend
+    SUBDIR += zabbix42-java
+    SUBDIR += zabbix42-proxy
+    SUBDIR += zabbix42-server
 
 .include <bsd.port.subdir.mk>

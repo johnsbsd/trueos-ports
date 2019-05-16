@@ -4,6 +4,7 @@
 
 PORTNAME=	src
 PORTVERSION=	${OS_PORTVERSION}
+PORTREVISION=	2
 CATEGORIES=	os
 
 MAINTAINER=	kris@ixsystems.com
@@ -12,13 +13,12 @@ COMMENT=	Port for the OS base sources
 USE_GITHUB=	yes
 GH_ACCOUNT=	trueos
 GH_PROJECT=	trueos
-GH_TAGNAME=	64aa824d79ccc17a12b740f3253abdcc0e3195ac
+GH_TAGNAME=	f75bda6936a65acfd235daab50f59eadf560ec3a
 
 PREFIX=/
 SRCDIR?=/usr/src
 NO_BUILD=	yes
 WITHOUT_FBSD10_FIX=	yes
-PKG_ABISTRING=	FreeBSD:13:${ARCH}
 LOCAL_SDIR?=	/usr/local_source
 .if exists(${LOCAL_SDIR}/${PORTNAME})
 WRKSRC=	${LOCAL_SDIR}/${PORTNAME}
@@ -30,6 +30,8 @@ WRKSRC=	${LOCAL_SDIR}/${PORTNAME}
 checksum fetch:
 	${ECHO_MSG} ${.TARGET} not needed because building direct
 .endif
+
+stage-qa: stage
 
 do-install:
 	${MKDIR} -p ${STAGEDIR}${SRCDIR}

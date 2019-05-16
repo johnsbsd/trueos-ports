@@ -23,6 +23,7 @@
     SUBDIR += arangodb33
     SUBDIR += ateam_mysql_ldap_auth
     SUBDIR += autobackupmysql
+    SUBDIR += automysqlbackup
     SUBDIR += bbdb
     SUBDIR += beansdb
     SUBDIR += buzhug
@@ -74,7 +75,6 @@
     SUBDIR += fastdb
     SUBDIR += firebird25-client
     SUBDIR += firebird25-server
-    SUBDIR += flamerobin
     SUBDIR += fortytwo-bdb
     SUBDIR += foundationdb
     SUBDIR += fpc-dblib
@@ -99,8 +99,6 @@
     SUBDIR += gnatsweb4
     SUBDIR += go-carbon
     SUBDIR += gom
-    SUBDIR += gomdb
-    SUBDIR += gosqlite3
     SUBDIR += gqlplus
     SUBDIR += grass7
     SUBDIR += gtksql
@@ -108,12 +106,6 @@
     SUBDIR += hashtypes
     SUBDIR += hbase
     SUBDIR += hiredis
-    SUBDIR += hs-esqueleto
-    SUBDIR += hs-hedis
-    SUBDIR += hs-mysql
-    SUBDIR += hs-persistent
-    SUBDIR += hs-persistent-sqlite
-    SUBDIR += hs-persistent-template
     SUBDIR += hsqldb
     SUBDIR += influxdb
     SUBDIR += innotop
@@ -141,7 +133,6 @@
     SUBDIR += leo_center
     SUBDIR += leofs
     SUBDIR += leveldb
-    SUBDIR += levigo
     SUBDIR += libcouchbase
     SUBDIR += libdbi
     SUBDIR += libdbi-drivers
@@ -185,8 +176,6 @@
     SUBDIR += mantis
     SUBDIR += mariadb-connector-c
     SUBDIR += mariadb-connector-odbc
-    SUBDIR += mariadb100-client
-    SUBDIR += mariadb100-server
     SUBDIR += mariadb101-client
     SUBDIR += mariadb101-server
     SUBDIR += mariadb102-client
@@ -206,6 +195,7 @@
     SUBDIR += mongodb36
     SUBDIR += mongodb36-tools
     SUBDIR += mongodb40
+    SUBDIR += mongodb40-tools
     SUBDIR += mroonga
     SUBDIR += mrtg-mysql-load
     SUBDIR += mtools-mongodb
@@ -743,7 +733,6 @@
     SUBDIR += proftpd-mod_sql_sqlite
     SUBDIR += proftpd-mod_sql_tds
     SUBDIR += pspg
-    SUBDIR += puppetdb-cli
     SUBDIR += puppetdb-terminus5
     SUBDIR += puppetdb-terminus6
     SUBDIR += puppetdb5
@@ -852,7 +841,9 @@
     SUBDIR += py-sqlrelay
     SUBDIR += py-swift
     SUBDIR += py-sybase
+    SUBDIR += py-tableschema
     SUBDIR += py-tarantool
+    SUBDIR += py-tiledb
     SUBDIR += py-umemcache
     SUBDIR += py-unqlite
     SUBDIR += py-varstack
@@ -875,9 +866,7 @@
     SUBDIR += qt5-sqldrivers-sqlite2
     SUBDIR += qt5-sqldrivers-sqlite3
     SUBDIR += qt5-sqldrivers-tds
-    SUBDIR += radix.v2
     SUBDIR += recutils
-    SUBDIR += redigo
     SUBDIR += redis
     SUBDIR += redis-devel
     SUBDIR += redis_exporter
@@ -891,8 +880,6 @@
     SUBDIR += rrdtool
     SUBDIR += rrdtool12
     SUBDIR += ruby-bdb
-    SUBDIR += ruby-gdbm
-    SUBDIR += ruby-odbc
     SUBDIR += ruby-qdbm
     SUBDIR += ruby-tokyocabinet
     SUBDIR += ruby-xapian
@@ -923,11 +910,11 @@
     SUBDIR += rubygem-data_objects
     SUBDIR += rubygem-datamapper
     SUBDIR += rubygem-dbd-mysql
-    SUBDIR += rubygem-dbd-odbc
     SUBDIR += rubygem-dbd-pg
     SUBDIR += rubygem-dbd-sqlite3
     SUBDIR += rubygem-dbf
     SUBDIR += rubygem-dbi
+    SUBDIR += rubygem-dbm
     SUBDIR += rubygem-dm-aggregates
     SUBDIR += rubygem-dm-chunked_query
     SUBDIR += rubygem-dm-constraints
@@ -951,11 +938,13 @@
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
     SUBDIR += rubygem-flipper-active_record013
+    SUBDIR += rubygem-gdbm
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails5
     SUBDIR += rubygem-globalid-rails50
     SUBDIR += rubygem-her
     SUBDIR += rubygem-hiredis
+    SUBDIR += rubygem-influxdb
     SUBDIR += rubygem-jdbc-mysql
     SUBDIR += rubygem-leo_manager_client
     SUBDIR += rubygem-mario-redis-lock
@@ -974,7 +963,9 @@
     SUBDIR += rubygem-pghero
     SUBDIR += rubygem-pghero-rails5
     SUBDIR += rubygem-pghero-rails50
+    SUBDIR += rubygem-pl-puppetdb-ruby
     SUBDIR += rubygem-postgres_ext
+    SUBDIR += rubygem-puppetdb_cli
     SUBDIR += rubygem-rbase
     SUBDIR += rubygem-redis
     SUBDIR += rubygem-redis-actionpack
@@ -987,6 +978,7 @@
     SUBDIR += rubygem-sqlite3-ruby
     SUBDIR += rubygem-state_machines-activemodel
     SUBDIR += rubygem-state_machines-activerecord
+    SUBDIR += rubygem-state_machines-activerecord05
     SUBDIR += rubygem-tarantool
     SUBDIR += sequeler
     SUBDIR += sfcgal
@@ -1027,6 +1019,7 @@
     SUBDIR += tdb
     SUBDIR += tdbc
     SUBDIR += tile38
+    SUBDIR += tiledb
     SUBDIR += timescaledb
     SUBDIR += tinycdb
     SUBDIR += tokyocabinet
@@ -1052,8 +1045,6 @@
     SUBDIR += xtrabackup
     SUBDIR += zabbix22-libzbxpgsql
     SUBDIR += zabbix3-libzbxpgsql
-    SUBDIR += zabbix32-libzbxpgsql
-    SUBDIR += zabbix34-libzbxpgsql
     SUBDIR += zodb3
 
 .include <bsd.port.subdir.mk>

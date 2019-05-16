@@ -29,6 +29,7 @@
     SUBDIR += cartotheque
     SUBDIR += charmtimetracker
     SUBDIR += chart
+    SUBDIR += cherrytree
     SUBDIR += clipit
     SUBDIR += conduit
     SUBDIR += conkyemail
@@ -116,7 +117,6 @@
     SUBDIR += horde-nag
     SUBDIR += hot-babe
     SUBDIR += howm
-    SUBDIR += hs-fdo-notify
     SUBDIR += ical
     SUBDIR += jjclient
     SUBDIR += jlj
@@ -161,6 +161,7 @@
     SUBDIR += mdh
     SUBDIR += mencal
     SUBDIR += menumaker
+    SUBDIR += meteo
     SUBDIR += moregroupware
     SUBDIR += mozo
     SUBDIR += myitcrm
@@ -197,6 +198,7 @@
     SUBDIR += py-bugwarrior
     SUBDIR += py-khal
     SUBDIR += py-khard
+    SUBDIR += py-paperless
     SUBDIR += py-py3status
     SUBDIR += py-pystash
     SUBDIR += py-send2trash
@@ -209,7 +211,6 @@
     SUBDIR += qlipper
     SUBDIR += qownnotes
     SUBDIR += recoll
-    SUBDIR += rednotebook
     SUBDIR += remind
     SUBDIR += rolo
     SUBDIR += rox-memo

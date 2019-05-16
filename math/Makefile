@@ -75,6 +75,7 @@
     SUBDIR += R-cran-memisc
     SUBDIR += R-cran-minqa
     SUBDIR += R-cran-miscTools
+    SUBDIR += R-cran-mitools
     SUBDIR += R-cran-mvtnorm
     SUBDIR += R-cran-nloptr
     SUBDIR += R-cran-nnls
@@ -172,6 +173,7 @@
     SUBDIR += clrng
     SUBDIR += cminpack
     SUBDIR += cmlib
+    SUBDIR += cocoalib
     SUBDIR += coin-or-data-netlib
     SUBDIR += coin-or-data-sample
     SUBDIR += coin-or-data-stochastic
@@ -183,6 +185,7 @@
     SUBDIR += coq
     SUBDIR += crlibm
     SUBDIR += cryptominisat
+    SUBDIR += curv
     SUBDIR += cvc3
     SUBDIR += cvc4
     SUBDIR += dbcsr
@@ -227,6 +230,7 @@
     SUBDIR += fpc-numlib
     SUBDIR += fplll
     SUBDIR += fricas
+    SUBDIR += frobby
     SUBDIR += fxt
     SUBDIR += g2o
     SUBDIR += galculator
@@ -257,7 +261,6 @@
     SUBDIR += gnuplot
     SUBDIR += gnuplot-lite
     SUBDIR += gnuplot-tex-extras
-    SUBDIR += goblin
     SUBDIR += gotoblas
     SUBDIR += grace
     SUBDIR += gracetmpl
@@ -269,31 +272,9 @@
     SUBDIR += gsl
     SUBDIR += hexcalc
     SUBDIR += hipmcl
+    SUBDIR += hmat-oss
     SUBDIR += hs-Agda
-    SUBDIR += hs-Agda-stdlib
-    SUBDIR += hs-NumInstances
-    SUBDIR += hs-adjunctions
-    SUBDIR += hs-categories
-    SUBDIR += hs-comonad
-    SUBDIR += hs-contravariant
-    SUBDIR += hs-data-lens
-    SUBDIR += hs-data-lens-template
-    SUBDIR += hs-dense-linear-algebra
-    SUBDIR += hs-distributive
-    SUBDIR += hs-erf
-    SUBDIR += hs-fixed
-    SUBDIR += hs-half
-    SUBDIR += hs-ieee754
-    SUBDIR += hs-integer-logarithms
-    SUBDIR += hs-kan-extensions
-    SUBDIR += hs-math-functions
-    SUBDIR += hs-mwc-random
-    SUBDIR += hs-pointed
-    SUBDIR += hs-probability
-    SUBDIR += hs-semigroupoids
     SUBDIR += hs-semigroups
-    SUBDIR += hs-statistics
-    SUBDIR += hs-vector-space
     SUBDIR += ignition-math
     SUBDIR += igraph
     SUBDIR += intervaltree
@@ -332,6 +313,7 @@
     SUBDIR += liblbfgs
     SUBDIR += libmesh
     SUBDIR += libmissing
+    SUBDIR += libnormaliz
     SUBDIR += libocas
     SUBDIR += liborigin
     SUBDIR += libpgmath
@@ -346,6 +328,7 @@
     SUBDIR += libxsmm
     SUBDIR += lidia
     SUBDIR += linpack
+    SUBDIR += lis
     SUBDIR += lll_spect
     SUBDIR += lp_solve
     SUBDIR += lrng
@@ -373,7 +356,6 @@
     SUBDIR += mlpack
     SUBDIR += moab
     SUBDIR += moo
-    SUBDIR += mosesdecoder
     SUBDIR += mpc
     SUBDIR += mpexpr
     SUBDIR += mpfr
@@ -493,6 +475,7 @@
     SUBDIR += openlibm
     SUBDIR += openmesh
     SUBDIR += opensolaris-libm
+    SUBDIR += optpp
     SUBDIR += orpie
     SUBDIR += osi
     SUBDIR += osqp
@@ -672,6 +655,7 @@
     SUBDIR += plplot-ada
     SUBDIR += polylib
     SUBDIR += primegen
+    SUBDIR += primesieve
     SUBDIR += primme
     SUBDIR += prng
     SUBDIR += proofgeneral
@@ -726,6 +710,7 @@
     SUBDIR += py-keras
     SUBDIR += py-keras-applications
     SUBDIR += py-keras-preprocessing
+    SUBDIR += py-kiwisolver
     SUBDIR += py-levmar
     SUBDIR += py-libpoly
     SUBDIR += py-luminol
@@ -736,6 +721,7 @@
     SUBDIR += py-munkres10
     SUBDIR += py-networkx
     SUBDIR += py-networkx1
+    SUBDIR += py-nevergrad
     SUBDIR += py-numarray
     SUBDIR += py-numeric
     SUBDIR += py-numexpr
@@ -774,6 +760,7 @@
     SUBDIR += py-random2
     SUBDIR += py-rapi
     SUBDIR += py-roman
+    SUBDIR += py-rpy
     SUBDIR += py-rpy2
     SUBDIR += py-scientific
     SUBDIR += py-scikit-umfpack
@@ -815,7 +802,6 @@
     SUBDIR += rngstreams
     SUBDIR += rocs
     SUBDIR += rpcalc
-    SUBDIR += rpy
     SUBDIR += rubygem-algebra
     SUBDIR += rubygem-expression_parser
     SUBDIR += rubygem-fftw3

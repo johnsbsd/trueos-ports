@@ -13,7 +13,6 @@
     SUBDIR += bind9-devel
     SUBDIR += bind911
     SUBDIR += bind912
-    SUBDIR += bind913
     SUBDIR += bind914
     SUBDIR += bindgraph
     SUBDIR += bundy
@@ -82,8 +81,6 @@
     SUBDIR += getdns
     SUBDIR += hesiod
     SUBDIR += hostdb
-    SUBDIR += hs-dns
-    SUBDIR += hs-gnuidn
     SUBDIR += idnkit
     SUBDIR += idnkit2
     SUBDIR += inadyn

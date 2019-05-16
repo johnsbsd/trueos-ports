@@ -24,7 +24,6 @@
     SUBDIR += comserv
     SUBDIR += concordance
     SUBDIR += congruity
-    SUBDIR += conserver
     SUBDIR += conserver-com
     SUBDIR += cqrlog
     SUBDIR += cubicsdr
@@ -93,6 +92,7 @@
     SUBDIR += locator
     SUBDIR += lrzsz
     SUBDIR += lysdr
+    SUBDIR += mbelib
     SUBDIR += mgetty+sendfax
     SUBDIR += minicom
     SUBDIR += mlan3
@@ -106,6 +106,7 @@
     SUBDIR += o2sms
     SUBDIR += obexapp
     SUBDIR += openobex
+    SUBDIR += openzwave
     SUBDIR += owfs
     SUBDIR += p5-Cisco-UCS
     SUBDIR += p5-Device-Gsm
@@ -204,6 +205,7 @@
     SUBDIR += wy60
     SUBDIR += xastir
     SUBDIR += xcwcp
+    SUBDIR += xdemorse
     SUBDIR += xdx
     SUBDIR += xlog
     SUBDIR += xmorse

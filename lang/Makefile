@@ -37,6 +37,7 @@
     SUBDIR += cint
     SUBDIR += cjs
     SUBDIR += cling
+    SUBDIR += clisp
     SUBDIR += clojure
     SUBDIR += clojure-mode.el
     SUBDIR += clover
@@ -64,6 +65,7 @@
     SUBDIR += erlang
     SUBDIR += erlang-doc
     SUBDIR += erlang-java
+    SUBDIR += erlang-man
     SUBDIR += erlang-riak
     SUBDIR += erlang-runtime15
     SUBDIR += erlang-runtime16
@@ -72,6 +74,7 @@
     SUBDIR += erlang-runtime19
     SUBDIR += erlang-runtime20
     SUBDIR += erlang-runtime21
+    SUBDIR += erlang-runtime22
     SUBDIR += erlang-wx
     SUBDIR += execline
     SUBDIR += expect
@@ -97,8 +100,8 @@
     SUBDIR += gawk
     SUBDIR += gcc
     SUBDIR += gcc-ecj45
+    SUBDIR += gcc10-devel
     SUBDIR += gcc48
-    SUBDIR += gcc49
     SUBDIR += gcc5
     SUBDIR += gcc6
     SUBDIR += gcc6-aux
@@ -262,9 +265,9 @@
     SUBDIR += pbasic
     SUBDIR += pcc
     SUBDIR += perl5-devel
-    SUBDIR += perl5.24
     SUBDIR += perl5.26
     SUBDIR += perl5.28
+    SUBDIR += perl5.30
     SUBDIR += petite-chez
     SUBDIR += pfe
     SUBDIR += phantomjs
@@ -302,7 +305,6 @@
     SUBDIR += python35
     SUBDIR += python36
     SUBDIR += python37
-    SUBDIR += qore
     SUBDIR += qscheme
     SUBDIR += quack
     SUBDIR += racket
@@ -316,9 +318,9 @@
     SUBDIR += rexx-wrapper
     SUBDIR += rhino
     SUBDIR += rubinius
-    SUBDIR += ruby23
     SUBDIR += ruby24
     SUBDIR += ruby25
+    SUBDIR += ruby26
     SUBDIR += runawk
     SUBDIR += rust
     SUBDIR += rust-nightly
