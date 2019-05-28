@@ -37,6 +37,7 @@
     SUBDIR += cint
     SUBDIR += cjs
     SUBDIR += cling
+    SUBDIR += clips
     SUBDIR += clisp
     SUBDIR += clojure
     SUBDIR += clojure-mode.el
@@ -130,6 +131,7 @@
     SUBDIR += gnustep-base
     SUBDIR += go
     SUBDIR += go14
+    SUBDIR += gomacro
     SUBDIR += gprolog
     SUBDIR += gravity
     SUBDIR += groovy
@@ -153,6 +155,7 @@
     SUBDIR += itcl
     SUBDIR += itcl4
     SUBDIR += jakarta-commons-jelly
+    SUBDIR += janet
     SUBDIR += jimtcl
     SUBDIR += jruby
     SUBDIR += js_of_ocaml
@@ -347,10 +350,8 @@
     SUBDIR += snobol4
     SUBDIR += solidity
     SUBDIR += spidermonkey17
-    SUBDIR += spidermonkey170
     SUBDIR += spidermonkey185
     SUBDIR += spidermonkey24
-    SUBDIR += spidermonkey38
     SUBDIR += spidermonkey52
     SUBDIR += spl
     SUBDIR += squeak

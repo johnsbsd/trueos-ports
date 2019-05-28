@@ -502,6 +502,7 @@
     SUBDIR += midipp
     SUBDIR += mikmod
     SUBDIR += milkytracker
+    SUBDIR += mio2jack
     SUBDIR += mixer.app
     SUBDIR += mixmos
     SUBDIR += mixxx
@@ -825,6 +826,7 @@
     SUBDIR += tkeca
     SUBDIR += toolame
     SUBDIR += tosha
+    SUBDIR += traverso
     SUBDIR += triceratops-lv2
     SUBDIR += trommler
     SUBDIR += tse3

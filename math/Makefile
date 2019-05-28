@@ -475,6 +475,7 @@
     SUBDIR += openlibm
     SUBDIR += openmesh
     SUBDIR += opensolaris-libm
+    SUBDIR += openturns
     SUBDIR += optpp
     SUBDIR += orpie
     SUBDIR += osi
@@ -775,7 +776,6 @@
     SUBDIR += py-svgmath
     SUBDIR += py-sym
     SUBDIR += py-symcxx
-    SUBDIR += py-symeig
     SUBDIR += py-sympy
     SUBDIR += py-theano
     SUBDIR += py-ufl
@@ -806,6 +806,7 @@
     SUBDIR += rubygem-expression_parser
     SUBDIR += rubygem-fftw3
     SUBDIR += rubygem-mathn
+    SUBDIR += rubygem-mtrc
     SUBDIR += rubygem-narray
     SUBDIR += rubygem-narray_miss
     SUBDIR += rubygem-numru-misc

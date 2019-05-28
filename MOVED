@@ -2072,7 +2072,6 @@ finance/xinvest||2011-05-02|Has expired: Outdated, abandoned
 finance/xquote||2011-05-02|Has expired: Outdated, abandoned
 french/plgrenouille||2011-05-02|Has expired: Upstream disappeared and distfile is no longer available
 editors/xemacs-devel-mule-xft||2011-05-02|Remove, editors/xemacs-devel-mule builds with xft support now
-lang/clips||2011-05-02|Has expired: Upstream disappeared and distfile is no longer available
 lang/eiffel||2011-05-02|Has expired: Upstream disappeared and distfile is no longer available
 lang/libutils||2011-05-02|Has expired: Upstream disappeared and distfile is no longer available
 lang/linux-libperl5.8||2011-05-02|Has expired: Upstream disappeared and distfile is no longer available
@@ -4515,7 +4514,6 @@ graphics/kbarcode||2013-07-26|Has expired: Depends on Qt 3.x
 graphics/kdegraphics3||2013-07-26|Has expired: Depends on Qt 3.x
 graphics/kipi-plugins||2013-07-26|Has expired: Depends on Qt 3.x
 graphics/kisomandel||2013-07-26|Has expired: Depends on Qt 3.x
-graphics/kooka||2013-07-26|Has expired: Depends on Qt 3.x
 graphics/kradview||2013-07-26|Has expired: Depends on Qt 3.x
 graphics/kuickshow||2013-07-26|Has expired: Depends on Qt 3.x
 graphics/landscape||2013-07-26|Has expired: Depends on Qt 3.x
@@ -10561,6 +10559,7 @@ science/ecs|science/code_saturne|2018-11-04|Code_Saturne merged bft, ecs, fvm, m
 science/fvm|science/code_saturne|2018-11-04|Code_Saturne merged bft, ecs, fvm, mei and ncs
 science/mei|science/code_saturne|2018-11-04|Code_Saturne merged bft, ecs, fvm, mei and ncs
 x11-wm/cde|x11/cde|2018-11-05|Recategorise
+misc/rumprun||2018-11-06|Has expired: "fails with current compilers"
 security/ossec-hids-client|security/ossec-hids-agent|2018-11-09|Agent is the name used in documentation
 graphics/ImageMagick|graphics/ImageMagick6|2018-11-10|Port renamed
 graphics/ImageMagick-nox11|graphics/ImageMagick6-nox11|2018-11-10|Port renamed
@@ -10661,7 +10660,6 @@ math/vtk5-data||2018-12-05|Removed
 devel/py-interface|devel/py-py_interface|2018-12-05|Rename to match upstream naming
 graphics/drm-stable-kmod|graphics/drm-fbsd11.2-kmod|2018-12-09|Cleaning up DRM ports nomenclature
 graphics/drm-next-kmod|graphics/drm-fbsd12.0-kmod|2018-12-09|Cleaning up DRM ports nomenclature
-graphics/drm-devel-kmod|graphics/drm-current-kmod|2018-12-09|Cleaning up DRM ports nomenclature
 deskutils/multisync-backup||2018-12-11|Has expired: GNOME 2 application
 deskutils/multisync-syncml||2018-12-11|Has expired: GNOME 2 application
 net/g2ipmsg||2018-12-11|Has expired: GNOME 2 application
@@ -11699,7 +11697,6 @@ audio/qmpdclient||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 audio/skype-call-recorder||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 biology/clustalx||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 cad/layouteditor||2019-03-16|Has expired: Qt4 has been EOL since december 2015
-cad/leocad||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 cad/meshlab||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 cad/qfsm||2019-03-16|Has expired: Qt4 has been EOL since december 2015
 cad/qucs||2019-03-16|Has expired: Qt4 has been EOL since december 2015
@@ -12753,3 +12750,14 @@ devel/modules2tuple|ports-mgmt/modules2tuple|2019-05-15|Moved to ports-mgmt cate
 textproc/zsh-syntax-highlighting|shells/zsh-syntax-highlighting|2019-05-15|Moved to shells category
 textproc/zsh-autosuggestions|shells/zsh-autosuggestions|2019-05-15|Moved to shells category
 dns/bind913|dns/bind9-devel|2019-05-16|Remove outdated development version
+databases/py-pg_pqueue||2019-05-16|Has expired: Upstream no longer maintained
+math/py-symeig|science/py-scipy|2019-05-16|Has expired: Consider using science/py-scipy as this library is included in py-scipy since 0.7 and onwards
+databases/py-mysql-connector-python2|databases/py-mysql-connector-python|2019-05-16|Has expired: Please consider using databases/py-mysql-connector-python which has been updated to latest upstream version
+www/py-requests1||2019-05-19|Temporary port while port consumers moved to requests 2.x support and the www/py-requests port. No longer depended on by any ports
+lang/spidermonkey170|lang/spidermonkey52|2019-05-23|Not depended on, use newer version
+lang/spidermonkey38|lang/spidermonkey52|2019-05-23|Not depended on, use newer version
+security/titan|security/ylva|2019-05-24|Project renamed by the developer
+www/npm-node6|www/npm|2019-05-25|node6 expired on Apr 30, 2019
+devel/py-prompt_toolkit2|devel/py-prompt_toolkit|2019-05-26|Has expired: No longer required, use devel/py-prompt_toolkit instead
+security/acme-client||2019-05-26|Removed
+net-im/qq||2019-05-26|Has expired: no longer supported upstream
