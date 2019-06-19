@@ -2,19 +2,19 @@
 
 PORTNAME=	openturns
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.13rc1
+DISTVERSION=	1.13
 CATEGORIES=	math
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Uncertainty treatment library
 
-LICENSE=	GPLv3
-LICENSE_FILE=	${WRKSRC}/COPYING
+LICENSE=	LGPL3
+LICENSE_FILE=	${WRKSRC}/COPYING.LESSER
 
 BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
-		flex:textproc/flex \
-		R>0:math/R
+		flex:textproc/flex
 LIB_DEPENDS=	libceres.so:math/ceres-solver \
+		libcminpack.so:math/cminpack \
 		libgflags.so:devel/gflags \
 		libglog.so:devel/glog \
 		libmuparser.so:math/muparser \
@@ -22,9 +22,8 @@ LIB_DEPENDS=	libceres.so:math/ceres-solver \
 		libopt.so:math/optpp \
 		libtbb.so:devel/tbb \
 		libhmat-oss.so:math/hmat-oss
-RUN_DEPENDS=	R>0:math/R
 
-USES=		bison blaslapack:openblas cmake compiler:c++11-lang eigen:3 gnome localbase:ldflags
+USES=		bison blaslapack:openblas cmake compiler:c++11-lang eigen:3 gnome localbase:ldflags pkgconfig
 USE_GITHUB=	yes
 USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
@@ -43,11 +42,7 @@ PYTHON_CMAKE_BOOL=	BUILD_PYTHON
 PYTHON_CMAKE_ON=	-DSWIG_EXECUTABLE=${LOCALBASE}/bin/swig3.0
 PYTHON_BUILD_DEPENDS=	swig3.0:devel/swig30 \
 			${PYTHON_RUN_DEPENDS}
-PYTHON_RUN_DEPENDS=	${PYNUMPY} \
-			${PYTHON_PKGNAMEPREFIX}chaospy>0:math/py-chaospy@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}matplotlib>0:math/py-matplotlib@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}nbconvert>0:devel/py-nbconvert@${PY_FLAVOR} \
-			${PYTHON_PKGNAMEPREFIX}scipy>0:science/py-scipy@${PY_FLAVOR}
+PYTHON_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}matplotlib>0:math/py-matplotlib@${PY_FLAVOR}
 
 PORTEXAMPLES=		*
 

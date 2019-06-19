@@ -710,6 +710,7 @@
     SUBDIR += p5-Tie-EncryptedHash
     SUBDIR += p5-Tree-Authz
     SUBDIR += p5-Unix-Passwd-File
+    SUBDIR += p5-Unix-setuid
     SUBDIR += p5-Yahoo-BBAuth
     SUBDIR += p5-dicewaregen
     SUBDIR += p5-openxpki
@@ -802,6 +803,7 @@
     SUBDIR += php73-openssl
     SUBDIR += php73-sodium
     SUBDIR += phpsecinfo
+    SUBDIR += picosha2
     SUBDIR += pidentd
     SUBDIR += pidgin-encryption
     SUBDIR += pidgin-otr
@@ -852,12 +854,12 @@
     SUBDIR += py-YubiOTP
     SUBDIR += py-acme
     SUBDIR += py-acme-tiny
+    SUBDIR += py-argon2-cffi
     SUBDIR += py-artifacts
     SUBDIR += py-asyncssh
     SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
     SUBDIR += py-borg.localrole
-    SUBDIR += py-bro-pkg
     SUBDIR += py-btchip-python
     SUBDIR += py-cerealizer
     SUBDIR += py-certbot
@@ -992,6 +994,7 @@
     SUBDIR += py-service_identity
     SUBDIR += py-signedjson
     SUBDIR += py-slowaes
+    SUBDIR += py-social-auth-core
     SUBDIR += py-spake2
     SUBDIR += py-ssh
     SUBDIR += py-ssh-audit
@@ -1014,6 +1017,7 @@
     SUBDIR += py-xmlsec
     SUBDIR += py-yara
     SUBDIR += py-yubikey-manager
+    SUBDIR += py-zkg
     SUBDIR += py-zope.app.authentication
     SUBDIR += py-zope.app.localpermission
     SUBDIR += py-zope.app.principalannotation
@@ -1032,7 +1036,6 @@
     SUBDIR += qtkeychain
     SUBDIR += quantis-kmod
     SUBDIR += racoon2
-    SUBDIR += racoon2-legacy
     SUBDIR += radamsa
     SUBDIR += ranpwd
     SUBDIR += ratproxy
@@ -1066,6 +1069,7 @@
     SUBDIR += rndpassw
     SUBDIR += ruby-bitwarden
     SUBDIR += ruby-camellia
+    SUBDIR += rubygem-acme-client
     SUBDIR += rubygem-aes_key_wrap
     SUBDIR += rubygem-airbrussh
     SUBDIR += rubygem-attr_encrypted

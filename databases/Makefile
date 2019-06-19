@@ -51,7 +51,6 @@
     SUBDIR += db48
     SUBDIR += db5
     SUBDIR += db6
-    SUBDIR += dbconnect
     SUBDIR += dbf
     SUBDIR += dbh
     SUBDIR += dbixx
@@ -165,6 +164,7 @@
     SUBDIR += linux-oracle-instantclient-sqlplus
     SUBDIR += liquibase
     SUBDIR += lmdb
+    SUBDIR += lua-lsqlite3
     SUBDIR += lua-resty-redis
     SUBDIR += lua-xapian
     SUBDIR += luadbi
@@ -660,9 +660,6 @@
     SUBDIR += plpgsql_check
     SUBDIR += pointcloud
     SUBDIR += postgis-jdbc
-    SUBDIR += postgis20
-    SUBDIR += postgis21
-    SUBDIR += postgis22
     SUBDIR += postgis23
     SUBDIR += postgis24
     SUBDIR += postgis25
@@ -682,6 +679,7 @@
     SUBDIR += postgresql-prefix
     SUBDIR += postgresql-relay
     SUBDIR += postgresql-repmgr
+    SUBDIR += postgresql-rum
     SUBDIR += postgresql-tds_fdw
     SUBDIR += postgresql-zhparser
     SUBDIR += postgresql10-client
@@ -953,8 +951,8 @@
     SUBDIR += rubygem-mysql2
     SUBDIR += rubygem-openid-redis-store
     SUBDIR += rubygem-paranoia
-    SUBDIR += rubygem-peek-mysql2-rails50
-    SUBDIR += rubygem-peek-pg-rails50
+    SUBDIR += rubygem-peek-mysql2-rails5
+    SUBDIR += rubygem-peek-pg-rails5
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg0
     SUBDIR += rubygem-pg018
