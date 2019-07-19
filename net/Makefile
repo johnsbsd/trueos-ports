@@ -91,6 +91,7 @@
     SUBDIR += corkscrew
     SUBDIR += corosync2
     SUBDIR += corosync3
+    SUBDIR += coturn
     SUBDIR += courier-authlib-ldap
     SUBDIR += cppzmq
     SUBDIR += cryptcat
@@ -450,7 +451,6 @@
     SUBDIR += mod_amd
     SUBDIR += mono-zeroconf
     SUBDIR += mopd
-    SUBDIR += morebalance
     SUBDIR += mosh
     SUBDIR += mosquitto
     SUBDIR += motsognir
@@ -515,6 +515,7 @@
     SUBDIR += ntp
     SUBDIR += ntp-devel
     SUBDIR += ntpa
+    SUBDIR += ntpsec
     SUBDIR += ntraceroute
     SUBDIR += nusoap
     SUBDIR += nuster
@@ -1218,6 +1219,7 @@
     SUBDIR += rubygem-fog-brightbox
     SUBDIR += rubygem-fog-brightbox0
     SUBDIR += rubygem-fog-cloudatcost
+    SUBDIR += rubygem-fog-cloudstack
     SUBDIR += rubygem-fog-digitalocean
     SUBDIR += rubygem-fog-dnsimple
     SUBDIR += rubygem-fog-dynect
@@ -1279,10 +1281,10 @@
     SUBDIR += rubygem-omniauth-oauth
     SUBDIR += rubygem-omniauth-oauth2
     SUBDIR += rubygem-omniauth-openid
-    SUBDIR += rubygem-omniauth_openid_connect
     SUBDIR += rubygem-omniauth-salesforce
     SUBDIR += rubygem-omniauth-twitter
     SUBDIR += rubygem-omniauth-ultraauth
+    SUBDIR += rubygem-omniauth_openid_connect
     SUBDIR += rubygem-open-uri-cached
     SUBDIR += rubygem-openid_connect
     SUBDIR += rubygem-opennebula
@@ -1328,6 +1330,7 @@
     SUBDIR += samba46
     SUBDIR += samba47
     SUBDIR += samba48
+    SUBDIR += samba410
     SUBDIR += samplicator
     SUBDIR += sbd
     SUBDIR += sbm
@@ -1426,7 +1429,6 @@
     SUBDIR += tftpgrab
     SUBDIR += thcrut
     SUBDIR += throttled
-    SUBDIR += tigervnc
     SUBDIR += tigervnc-server
     SUBDIR += tigervnc-viewer
     SUBDIR += tightvnc
@@ -1488,6 +1490,7 @@
     SUBDIR += wackamole
     SUBDIR += wackford-squeers
     SUBDIR += wakeonlan
+    SUBDIR += waypipe
     SUBDIR += whois
     SUBDIR += widentd
     SUBDIR += wireguard

@@ -5,7 +5,7 @@ PORTNAME=	drm-current-kmod
 PORTVERSION=	4.16.g20190430
 CATEGORIES=	graphics kld
 
-MAINTAINER=	jmd@FreeBSD.org
+MAINTAINER=	x11@FreeBSD.org
 COMMENT=	DRM modules for the linuxkpi-based KMS components
 
 LICENSE=	BSD2CLAUSE MIT GPLv2
@@ -26,6 +26,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	FreeBSDDesktop
 GH_PROJECT=	kms-drm
 GH_TAGNAME=	993d966
+
 
 .include <bsd.port.options.mk>
 
@@ -48,7 +49,7 @@ PLIST_SUB+=	I915=""
 PLIST_SUB+=     VMWGFX=""
 .elif ${ARCH} == "powerpc64"
 PLIST_SUB+=	AMDGPU=""
-PLIST_SUB+=	AMDKFD="@comment " 
+PLIST_SUB+=	AMDKFD="@comment "
 PLIST_SUB+=	I915="@comment "
 PLIST_SUB+=     VMWGFX="@comment "
 .else

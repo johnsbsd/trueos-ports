@@ -8,7 +8,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Buildkernel portition of os packages
+COMMENT=	Distribution tarball of kernel for packaging
 
 SRCDIR?=/usr/src
 .if !exists(${SRCDIR}/Makefile)
@@ -68,15 +68,15 @@ do-build:
 		buildkernel
 
 do-install:
-	${MKDIR} ${STAGEDIR}/kernel
-	${MKDIR} ${STAGEDIR}/usr/dist
+	@${MKDIR} ${STAGEDIR}/kernel
+	@${MKDIR} ${STAGEDIR}/usr/dist
 	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
 		KERNCONF=${KERNCONF} \
 		${MFLAGS} \
 		DESTDIR=${STAGEDIR}/kernel \
 		installkernel
-	tar cvJf ${STAGEDIR}${OS_KERNDIST} -C ${STAGEDIR}/kernel .
-	chflags -R noschg ${STAGEDIR}/kernel
+	${TAR} cvJf ${STAGEDIR}/${OS_KERNDIST} -C ${STAGEDIR}/kernel .
+	${CHFLAGS} -R noschg ${STAGEDIR}/kernel
 	${RM} -rf ${STAGEDIR}/kernel
 
 .include "../Makefile.common"

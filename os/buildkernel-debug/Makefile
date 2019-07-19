@@ -8,7 +8,7 @@ DISTFILES=
 EXTRACT_ONLY=
 
 MAINTAINER=	kmoore@FreeBSD.org
-COMMENT=	Buildkernel portition of os packages with debug enabled
+COMMENT=	Distribution tarball of debug kernel for packaging
 
 SRCDIR?=/usr/src
 .if !exists(${SRCDIR}/Makefile)
@@ -68,16 +68,16 @@ do-build:
 		buildkernel
 
 do-install:
-	${MKDIR} ${STAGEDIR}/kernel-debug
-	${MKDIR} ${STAGEDIR}/usr/dist
+	@${MKDIR} ${STAGEDIR}/kernel-debug
+	@${MKDIR} ${STAGEDIR}/usr/dist
 	cd ${WRKSRC} && ${SETENV} -i MAKEOBJDIRPREFIX=${WRKDIR} make ${JOBFLAG} ${MCONF} ${KERNEL_MAKE_FLAGS} \
 		KERNCONF=${KERNCONF} \
 		${MFLAGS} \
 		DESTDIR=${STAGEDIR}/kernel-debug \
 		installkernel
 	${MV} ${STAGEDIR}/kernel-debug/boot/kernel ${STAGEDIR}/kernel-debug/boot/kernel-debug
-	tar cvJf ${STAGEDIR}${OS_KERNDIST_DEBUG} -C ${STAGEDIR}/kernel-debug .
-	chflags -R noschg ${STAGEDIR}/kernel-debug
+	${TAR} cvJf ${STAGEDIR}/${OS_KERNDIST_DEBUG} -C ${STAGEDIR}/kernel-debug .
+	${CHFLAGS} -R noschg ${STAGEDIR}/kernel-debug
 	${RM} -rf ${STAGEDIR}/kernel-debug
 
 .include "../Makefile.common"
